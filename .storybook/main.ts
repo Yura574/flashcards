@@ -1,6 +1,4 @@
 import type {StorybookConfig} from '@storybook/react-vite';
-import '@fontsource/roboto/400.css'
-import '@fontsource/roboto/700.css'
 
 const config: StorybookConfig = {
   "stories": [
