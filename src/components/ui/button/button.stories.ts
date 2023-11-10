@@ -59,3 +59,12 @@ export const FullWidth: Story = {
     variant: 'primary',
   },
 }
+
+export const AsLink: Story = {
+  args: {
+    as: 'a',
+    children: 'As Link',
+    fullWidth: false,
+    name: 'this is link',
+  },
+}
