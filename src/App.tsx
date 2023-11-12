@@ -5,6 +5,7 @@ export function App() {
     <div style={{ fontFamily: 'roboto' }}>
       Hello
       <Button />
+      <Button as={'a'} href={'/link'} name={'link'} variant={'primary'} />
     </div>
   )
 }

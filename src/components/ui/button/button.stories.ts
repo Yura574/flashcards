@@ -60,6 +60,7 @@ export const FullWidth: Story = {
   },
 }
 
+// @ts-ignore
 export const AsLink: Story = {
   args: {
     as: 'a',
