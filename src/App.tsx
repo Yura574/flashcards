@@ -1,3 +1,5 @@
+import { Input } from '@/components/ui/input'
+
 import { Button } from './components/ui/button'
 
 export function App() {
@@ -6,6 +8,8 @@ export function App() {
       Hello
       <Button />
       <Button as={'a'} href={'/link'} name={'link'} variant={'primary'} />
+      <Input />
+      <input />
     </div>
   )
 }

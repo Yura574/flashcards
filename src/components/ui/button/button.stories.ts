@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './'
 
-// @ts-ignore
 const meta = {
   argTypes: {
     variant: {
