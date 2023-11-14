@@ -3,6 +3,9 @@ import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
   argTypes: {
+    error: {
+      defaultValue: '',
+    },
     label: {
       defaultValue: '',
     },
@@ -18,10 +21,18 @@ const meta = {
 
 export default meta
 
-type Story = StoryObj
+type Story = StoryObj<typeof meta>
 export const DefaultInput: Story = {
   args: {
     children: 'Default input',
+    label: 'input',
+    variant: 'default',
+  },
+}
+export const DefaultInputWithError: Story = {
+  args: {
+    children: 'Default input',
+    error: 'error',
     label: 'input',
     variant: 'default',
   },

@@ -21,7 +21,7 @@ export const Input = <T extends ElementType = 'input'>(props: InputProps<T>) => 
         </label>
       )}
       <Component
-        className={`${s.reset} ${variant && s[variant]}  ${classname}`}
+        className={`${s.reset} ${variant && s[variant]} ${error && s.errorInput}  ${classname}`}
         id={'inputComponent'}
       />
       {error && <div className={s.error}>{error}</div>}

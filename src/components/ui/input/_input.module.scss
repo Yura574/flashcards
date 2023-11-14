@@ -8,6 +8,8 @@
   padding-left: 12px;
   line-height: var(--line-height-m);
   cursor: pointer;
+  display: inline-block;
+  max-width: 284px;
 
   &:active {
     border: 1px solid white;
@@ -20,8 +22,8 @@
   }
 
   &:focus {
-    border: 1px solid var(--color-dark-100);
-    color: var(--color-info-700);
+    border: 1px solid var(--color-info-700);
+    color: var(--color-dark-300);
   }
 }
 
@@ -36,9 +38,15 @@
   line-height: var(--line-height-m);
 }
 
-.error {
+.errorInput {
   border: 1px solid var(--color-danger-300);
   color: var(--color-danger-300);
+  font-size: var(--font-size-xs);
+}
+
+.error {
+  color: var(--color-danger-300);
+  font-size: var(--font-size-xs);
 }
 
 .default {
@@ -46,7 +54,8 @@
 }
 
 .password {
-
+  background: url("@/assets/svg/passwordEye.svg") no-repeat right;
+  background-position-x: calc(100% - 12px);
 }
 
 .search {
