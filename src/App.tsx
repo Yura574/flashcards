@@ -9,7 +9,6 @@ export function App() {
       <Button />
       <Button as={'a'} href={'/link'} name={'link'} variant={'primary'} />
       <Input />
-      <input />
     </div>
   )
 }
