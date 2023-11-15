@@ -3,6 +3,10 @@ import { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
   argTypes: {
+    disabled: {
+      control: ['radio'],
+      defaultValue: false,
+    },
     error: {
       defaultValue: '',
     },
@@ -24,14 +28,13 @@ export default meta
 type Story = StoryObj<typeof meta>
 export const DefaultInput: Story = {
   args: {
-    children: 'Default input',
+    disabled: true,
     label: 'input',
     variant: 'default',
   },
 }
 export const DefaultInputWithError: Story = {
   args: {
-    children: 'Default input',
     error: 'error',
     label: 'input',
     variant: 'default',
@@ -40,7 +43,13 @@ export const DefaultInputWithError: Story = {
 
 export const PasswordInput: Story = {
   args: {
-    children: 'Password input',
+    label: 'input',
+    variant: 'password',
+  },
+}
+export const PasswordInputWithError: Story = {
+  args: {
+    error: 'Some error',
     label: 'input',
     variant: 'password',
   },
@@ -48,7 +57,6 @@ export const PasswordInput: Story = {
 
 export const SearchInput: Story = {
   args: {
-    children: 'Search input',
     label: 'input',
     variant: 'search',
   },

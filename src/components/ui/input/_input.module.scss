@@ -3,7 +3,7 @@
   all: unset;
   border-radius: 2px;
   //background-color: white;
-  border: 1px solid var(--color-dark-300);
+  border: 2px solid var(--color-dark-300);
   color: var(--color-dark-300);
   padding-left: 12px;
   line-height: var(--line-height-m);
@@ -12,17 +12,18 @@
   max-width: 284px;
 
   &:active {
-    border: 1px solid white;
+    border: 2px solid white;
     color: white;
   }
 
   &:hover {
-    border: 1px solid var(--color-dark-100);
+    border: 2px solid var(--color-dark-100);
     color: var(--color-dark-100);
+    background-color: var(--color-dark-300);
   }
 
   &:focus {
-    border: 1px solid var(--color-info-700);
+    border: 2px solid var(--color-info-700);
     color: var(--color-dark-300);
   }
 }
@@ -57,6 +58,7 @@
   background: url("@/assets/svg/passwordEye.svg") no-repeat right;
   background-position-x: calc(100% - 12px);
 }
+
 
 .search {
 
