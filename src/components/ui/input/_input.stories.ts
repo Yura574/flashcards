@@ -14,7 +14,7 @@ const meta = {
       defaultValue: '',
     },
     variant: {
-      control: ['radio'],
+      controls: ['radio'],
       options: ['default', 'password', 'search'],
     },
   },
