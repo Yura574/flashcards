@@ -7,6 +7,7 @@ export type ButtonProps<T extends ElementType = 'button'> = {
   children?: ReactNode
   className?: string
   fullWidth?: boolean
+  icon?: string
   variant?: 'link' | 'primary' | 'secondary' | 'tertiary'
 } & ComponentPropsWithoutRef<T>
 
@@ -15,9 +16,10 @@ export const Button = <T extends ElementType = 'button'>(
 ) => {
   const {
     as: Component = 'button',
+    children,
     className,
-    disabled,
     fullWidth,
+    icon,
     variant = 'primary',
     ...rest
   } = props
@@ -26,6 +28,8 @@ export const Button = <T extends ElementType = 'button'>(
     <Component
       className={`${s.reset} ${s[variant]} ${fullWidth ? s.fullWidth : ''} ${className}`}
       {...rest}
-    />
+    >
+      {icon && <img alt={'icon'} className={s.iconButton} src={icon} />} {children}
+    </Component>
   )
 }

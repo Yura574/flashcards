@@ -6,8 +6,7 @@ export function App() {
   return (
     <div style={{ fontFamily: 'roboto' }}>
       Hello
-      <Button />
-      <Button as={'a'} href={'/link'} onClick={() => alert('asas')} variant={'primary'} />
+      <Button disabled>button</Button>
       <Input onClick={() => alert('12')} value={'lololo'} variant={'search'} />
     </div>
   )

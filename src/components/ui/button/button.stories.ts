@@ -1,3 +1,4 @@
+import img from '@/assets/svg/button-back.svg'
 import { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './'
@@ -22,6 +23,14 @@ export const Primary: Story = {
   args: {
     children: 'Primary button',
     disabled: false,
+    variant: 'primary',
+  },
+}
+export const PrimaryWithIcon: Story = {
+  args: {
+    children: `Primary button`,
+    disabled: false,
+    icon: img,
     variant: 'primary',
   },
 }

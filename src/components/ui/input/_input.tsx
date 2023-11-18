@@ -1,5 +1,7 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react'
 
+import closeImg from '@/assets/svg/close-outline.svg'
+
 import s from './_input.module.scss'
 
 export type InputProps<T extends ElementType = 'input'> = {
@@ -40,7 +42,11 @@ export const Input = <T extends ElementType = 'input'>(
           id={'inputComponent'}
           {...rest}
         />
-        {variant === 'search' && rest.value && <button className={s.absoluteButton}>x</button>}
+        {variant === 'search' && rest.value && (
+          <button className={s.absoluteButton}>
+            <img alt={'close'} src={closeImg} />
+          </button>
+        )}
       </div>
       {error && <div className={s.error}>{error}</div>}
     </form>
