@@ -10,6 +10,7 @@
   cursor: pointer;
   display: inline-block;
   max-width: 284px;
+  position: relative;
 
   &:active {
     border: 2px solid white;
@@ -28,9 +29,10 @@
   }
 }
 
-.inputWrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .label {
@@ -59,11 +61,26 @@
   background-position-x: calc(100% - 12px);
 }
 
-
+.inputWrapper{
+  position: relative;
+}
 .search {
+
   background: url("@/assets/svg/search.svg") no-repeat;
   background-position-x: 12px;
   background-position-y: 50%;
-  padding-left: 28px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+
+.absoluteButton{
+  position: absolute;
+  background: rgba(0,0,0,0);
+  right: 5px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+
 
 }

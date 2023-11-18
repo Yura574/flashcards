@@ -8,7 +8,7 @@ export function App() {
       Hello
       <Button />
       <Button as={'a'} href={'/link'} onClick={() => alert('asas')} variant={'primary'} />
-      <Input onClick={() => alert('12')} value={'lololo'} />
+      <Input onClick={() => alert('12')} value={'lololo'} variant={'search'} />
     </div>
   )
 }

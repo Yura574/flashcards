@@ -25,21 +25,24 @@ export const Input = <T extends ElementType = 'input'>(
   } = props
 
   return (
-    <div className={s.inputWrapper}>
+    <form className={s.wrapper}>
       {label && (
         <label className={s.label} htmlFor={'inputComponent'}>
           input
         </label>
       )}
-      <Component
-        className={`${s.reset} ${variant && s[variant]} ${disabled ? s.disabled : ''} ${
-          error && s.errorInput
-        }  ${classname}`}
-        disabled={disabled}
-        id={'inputComponent'}
-        {...rest}
-      />
+      <div className={s.inputWrapper}>
+        <Component
+          className={`${s.reset} ${variant && s[variant]} ${disabled ? s.disabled : ''} ${
+            error && s.errorInput
+          }  ${classname}`}
+          disabled={disabled}
+          id={'inputComponent'}
+          {...rest}
+        />
+        {variant === 'search' && rest.value && <button className={s.absoluteButton}>x</button>}
+      </div>
       {error && <div className={s.error}>{error}</div>}
-    </div>
+    </form>
   )
 }
