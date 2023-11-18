@@ -1,48 +1,96 @@
 .reset {
   all: unset;
-}
-
-.primary {
-  display: flex;
-  color: var(--color-light-100);
+  padding: 6px 28px;
   font-family: Roboto, 'sans-serif';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  background-color: var(--color-primary-500);
   border-radius: 4px;
-  padding: 6px 28px;
-  box-shadow: 0 4px 18px 0 rgba(140, 97, 255, 0.35);
   box-sizing: content-box;
-
-  &:active {
-    background-color: var(--color-primary-700);
-    outline: 2px solid var(--color-info-500);
-
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  &:focus{
+    outline: 2px solid var(--color-info-700);
   }
+}
+
+.primary {
+  color: var(--color-light-100);
+  background-color: var(--color-primary-500);
+  box-shadow: 0 4px 18px 0 rgba(140, 97, 255, 0.35);
 
   &:hover {
     background-color: var(--color-primary-300);
+    &:active {
+      background-color: var(--color-primary-700);
+      outline: 2px solid var(--color-info-500);
+    }
   }
-  &:disabled{
+
+  &:disabled {
     background: var(--color-primary-900);
-    &:active{
+    opacity: 0.5;
+    &:active {
       outline: none;
     }
   }
 
-  //&:focus {
-  //  outline: 2px solid var(--info-700, #2F68CC);
-  //  background-color: var(--color-primary-500);
-  //}
+}
+
+.secondary {
+  background-color: var(--color-dark-300);
+  box-shadow: 0 2px 10px 0 rgba(109, 109, 109, 0.25);
+
+  &:hover{
+    background-color: var(--color-dark-100);
+    &:active{
+      background-color: var(--color-dark-500);
+    }
+  }
+  &:disabled{
+    opacity: 0.5;
+    background-color: var(--color-dark-500);
+    //color: var(--color-dark-100);
+    &:hover{
+      background-color: var(--color-dark-500);
+    }
+  }
+}
+.tertiary{
+  border: 1px solid var(--color-primary-500);
+  color: var(--color-primary-500);
+
+  &:hover{
+    background-color: var(--color-dark-500);
+    &:active{
+      background-color: var(--color-primary-700);
+    }
+  }
+  &:disabled{
+    color: var(--color-primary-900);
+    border: 1px solid var(--color-primary-900);
+    &:hover{
+      background-color: var(--color-dark-900);
+    }
+  }
+}
+.link{
+  color: var(--color-primary-500);
+  &:hover{
+    color: var(--color-primary-300);
+    &:active{
+      color: var(--color-primary-700);
+    }
+  }
+  &:disabled{
+    color: var(--color-primary-900);
+  }
 }
 
 .fullWidth {
   width: 100%;
 }
 
-.iconButton {
-  margin-right: 10px;
-}
 

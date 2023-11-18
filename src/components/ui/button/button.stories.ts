@@ -1,4 +1,4 @@
-import img from '@/assets/svg/button-back.svg'
+import buttonBack from '@/assets/svg/button-back.svg'
 import { Meta, StoryObj } from '@storybook/react'
 
 import { Button } from './'
@@ -30,7 +30,7 @@ export const PrimaryWithIcon: Story = {
   args: {
     children: `Primary button`,
     disabled: false,
-    icon: img,
+    icon: buttonBack,
     variant: 'primary',
   },
 }
@@ -39,6 +39,14 @@ export const Secondary: Story = {
   args: {
     children: 'Secondary button',
     disabled: false,
+    variant: 'secondary',
+  },
+}
+export const SecondaryWithIcon: Story = {
+  args: {
+    children: 'Secondary button',
+    disabled: false,
+    icon: buttonBack,
     variant: 'secondary',
   },
 }
@@ -75,5 +83,6 @@ export const AsLink: Story = {
     children: 'As Link',
     fullWidth: false,
     name: 'this is link',
+    variant: 'link',
   },
 }
